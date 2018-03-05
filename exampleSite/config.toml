@@ -1,0 +1,57 @@
+baseurl = "https://example.com"
+
+title = "Hugo Onyx Theme"
+
+theme = "hugo-onyx-theme"
+themesDir = "../../"
+
+enableGitInfo = true
+
+disableFastRender = true        # Hugo 0.30
+
+pygmentsCodeFences = true       # This applies to Chroma too.
+pygmentsUseClasses = true       # This applies to Chroma too.
+
+enableEmoji = true
+
+[Author]
+  name = "Kaushal Modi"
+
+[params]
+  name = "Onyx"
+  description = "A Hugo theme built using the Hugo Alabaster theme as base."
+
+  # Go date formats: https://golang.org/pkg/time/#pkg-constants
+  dateform = "Mon Jan 2, 2006"
+
+  github_user = "kaushalmodi"
+  github_repo = "hugo-onyx-theme"
+  github_banner = true
+
+#  images = ["/favicon-196x196.png"] # Used in twitter_cards.html partial
+
+  custom_css = [ # Chroma GitHub theme
+                 "css/github_chroma.css" # Needs pygmentsUseClasses to be true
+               ]
+  custom_css_absolute = [ # Iosevka fonts
+                          # "https://cdn.rawgit.com/kaushalmodi/iosevka-mirror/v1.13.2/iosevka.css"
+                        ]
+  custom_js  = []
+
+  # favicon = "favicon.ico"
+
+[params.sidebar]
+  logo = "favicon.ico"
+
+  github_button  = true
+  travis_button  = true
+  codecov_button = false
+  gratipay = ""
+
+  # Mon Sep 04 23:55:36 EDT 2017 - kmodi
+  # Disable this option for now.. but seems to be useful in future
+  show_relations = false
+
+[params.footer]
+  copyright = ""
+  show_powered_by = true
