@@ -44,7 +44,7 @@ enableEmoji = true
   logo = "favicon.ico"
 
   github_button  = true
-  travis_button  = true
+  travis_button  = false
   codecov_button = false
   gratipay = ""
 
