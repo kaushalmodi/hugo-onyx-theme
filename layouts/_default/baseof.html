@@ -22,11 +22,6 @@
 		<script src="{{ . | relURL }}"></script>
 	    {{ end }}
 
-	    {{ with .Site.Params.highlightjs -}}
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js"></script>
-		<script>hljs.initHighlightingOnLoad();</script>
-	    {{ end }}
-
 	    {{ template "_internal/google_analytics.html" . }}
 	</div>
     </body>
