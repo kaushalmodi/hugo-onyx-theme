@@ -21,11 +21,10 @@
     {{ end }}
 
     {{ partial "date-maybe.html" . }}
-    <br />
+    <div class="clear-float"></div>
     {{ if (ne (dateFormat $.Site.Params.dateform .Date) (dateFormat $.Site.Params.dateform .Lastmod)) }}
         <span class="post-date"><small>Last modified on {{ dateFormat $.Site.Params.dateform .Lastmod }}</small></span>
     {{ end }}
-    <br />
     <div class="clear-float"></div>
 </div>
 
