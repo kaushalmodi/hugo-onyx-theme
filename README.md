@@ -31,8 +31,10 @@ very handy. Spin it up with the following command:
 hugo server
 ```
 
-Now you can go to [localhost:1313](http://localhost:1313) and the Onyx
-theme should be visible.
+Now you can go to `localhost:1313` and the Onyx theme generated site should be
+visible.
+
+[**Demo**][demo]
 
 ## Acknowledgements
 
@@ -55,3 +57,5 @@ project.
 The theme is released under the BSD license. Read the
 [license](https://github.com/kaushalmodi/hugo-onyx-theme/blob/master/LICENSE.md)
 for more information.
+
+[demo]: https://hugo-onyx.netlify.com/
