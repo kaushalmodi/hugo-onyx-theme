@@ -29,16 +29,6 @@
     <div class="clear-float"></div>
 </div>
 
-{{ if not .Params.notoc }}
-    {{ with .TableOfContents }}
-        <div class="toc">
-            {{ . }}
-            <a href="#top" class="back-to-top">Back to top</a>
-        </div>
-    {{ end }}
-    {{ partial "toc_on_side.html" . }}
-{{ end }}
-
 <div class="post">
     {{ partial "headline-hash.html" .Content }}
 </div>
