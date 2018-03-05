@@ -1,6 +1,8 @@
+Copyright (c) 2018 Kaushal Modi
+
 Copyright (c) 2016 Digitalcraftsman
 
-Based on original work copyright (c) Jeff Forcier, copyright (c) 2011 Kenneth Reitz 
+Based on original work copyright (c) Jeff Forcier, copyright (c) 2011 Kenneth Reitz
 and copyright (c) 2010 Armin Ronacher.
 
 Some rights reserved.

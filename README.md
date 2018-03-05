@@ -1,6 +1,10 @@
-# Alabaster
+# Onyx
 
-A documentation theme ported from [Sphinx](http://www.sphinx-doc.org/en/stable/) to [Hugo](https://gohugo.io).
+A documentation theme forked from [Hugo Alabaster
+theme](https://github.com/digitalcraftsman/hugo-alabaster-theme). It is an
+indirect port of [Sphinx](http://www.sphinx-doc.org/en/stable/).
+
+## Alabaster screenshot
 
 [![Screenshot](https://raw.githubusercontent.com/digitalcraftsman/hugo-alabaster-theme/dev/images/screenshot.png)](https://digitalcraftsman.github.io/hugo-alabaster-theme/)
 
@@ -9,14 +13,16 @@ A documentation theme ported from [Sphinx](http://www.sphinx-doc.org/en/stable/)
 Install with `git`:
 
 ```sh
-git clone git@github.com:digitalcraftsman/hugo-alabaster-theme.git themes/hugo-alabaster-theme
+cd /to/your/hugo/site/repo/root
+git clone https://github.com/kaushalmodi/hugo-onyx-theme themes/hugo-onyx-theme
 ```
 
-> This theme uses the latest developement version of Hugo. Therefore, it doesn't work with the official releases. Look [here](https://github.com/spf13/hugo#build-and-install-the-binaries-from-source-advanced-install) if you want to know how to build Hugo from source.
+Next, take a look in the `exampleSite` folder at. This directory contains an
+example config file and the content for the demo. It serves as an example setup
+for your documentation.
 
-Next, take a look in the `exampleSite` folder at. This directory contains an example config file and the content for the demo. It serves as an example setup for your documentation. 
-
-Copy at least the `config.toml` in the root directory of your website. Overwrite the existing config file if necessary. 
+Copy at least the `config.toml` in the root directory of your website. Overwrite
+the existing config file if necessary.
 
 Hugo includes a development server, so you can view your changes as you go -
 very handy. Spin it up with the following command:
@@ -25,18 +31,27 @@ very handy. Spin it up with the following command:
 hugo server
 ```
 
-Now you can go to [localhost:1313](http://localhost:1313) and the Alabaster
+Now you can go to [localhost:1313](http://localhost:1313) and the Onyx
 theme should be visible.
-
-For detailed installation instructions visit the [demo](https://digitalcraftsman.github.io/hugo-alabaster-theme/).
 
 ## Acknowledgements
 
-Last but not I want to give a big shout-out to [Jeff Forcier](https://github.com/bitprophet), [Kenneth Reitz](https://github.com/kennethreitz) and [Armin Ronacher](https://github.com/mitsuhiko). Their work and modifications on the original codebase made this port possible.
+I want to give a big shout-out to
+[Digitalcraftsman](https://github.com/digitalcraftsman), and also to the
+original theme (from which the Alabaster theme was ported) authors [Jeff
+Forcier](https://github.com/bitprophet), [Kenneth
+Reitz](https://github.com/kennethreitz) and [Armin
+Ronacher](https://github.com/mitsuhiko).
 
-Furthermore, thanks to [Steve Francia](https://gihub.com/spf13) for creating Hugo and the [awesome community](https://github.com/spf13/hugo/graphs/contributors) around the project.
+Furthermore, thanks to [Steve Francia](https://github.com/spf13) for creating
+Hugo, [Bjørn Erik Pedersen](https://github.com/bep) for leading the current Hugo
+development, and the [awesome
+community](https://github.com/spf13/hugo/graphs/contributors) around the
+project.
 
 
 ## License
 
-The theme is released under the BSD license. Read the [license](https://github.com/digitalcraftsman/hugo-alabaster-theme/blob/master/LICENSE.md) for more information.
+The theme is released under the BSD license. Read the
+[license](https://github.com/kaushalmodi/hugo-onyx-theme/blob/master/LICENSE.md)
+for more information.
