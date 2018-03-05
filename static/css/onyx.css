@@ -586,30 +586,30 @@ table.docutils.citation, table.docutils.citation td, table.docutils.citation th 
 }
 
 /* Org-style Headline Level Prefix */
-.body h2::before,
-.body h3::before,
-.body h4::before,
-.body h5::before,
-.body h6::before {
+.post h2::before,
+.post h3::before,
+.post h4::before,
+.post h5::before,
+.post h6::before {
     color: #515151;
     opacity: 0.6;
     font-size: 1.3em;
     font-weight: bold;
     vertical-align: -25%;
 }
-.body h2::before {
+.post h2::before {
     content: "* ";
 }
-.body h3::before {
+.post h3::before {
     content: "** ";
 }
-.body h4::before {
+.post h4::before {
     content: "*** ";
 }
-.body h5::before {
+.post h5::before {
     content: "**** ";
 }
-.body h6::before {
+.post h6::before {
     content: "***** ";
 }
 
@@ -785,4 +785,15 @@ dd {
 /* No list bullets in task lists */
 ul.task-list {
     list-style-type: none;
+}
+
+/* No list bullets in post lists */
+.post-list {
+    list-style-type: none;
+}
+
+/* https://css-tricks.com/all-about-floats/ */
+/* Clear all floats. */
+.clear-float {
+    clear: both;
 }

@@ -1,0 +1,5 @@
+{{ with .Date }}
+    {{ if (not (eq (dateFormat "2006-01-02" .) "0001-01-01")) }}
+        <span class="post-date">{{ dateFormat $.Site.Params.dateform . | safeHTML }}</span>
+    {{ end }}
+{{ end }}

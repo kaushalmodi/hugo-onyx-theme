@@ -1,4 +1,40 @@
 {{ define "main" }}
+
 <h1>{{ .Title }}</h1>
-{{ partial "headline-hash.html" .Content }}
+
+<div>
+    {{ with .Params.author }}
+        {{ $num := len . }}
+        {{ if gt $num 0 }}
+            <span class="author">&mdash;
+                {{ range $c, $v := . }}
+                    {{ . -}}{{- if (lt $c (sub $num 1)) -}}, {{ end }}
+                {{ end }}
+            </span>
+        {{ end }}
+    {{ end }}
+
+    {{ partial "date-maybe.html" . }}
+    <br />
+    {{ if (ne (dateFormat $.Site.Params.dateform .Date) (dateFormat $.Site.Params.dateform .Lastmod)) }}
+        <span class="post-date"><small>Last modified on {{ dateFormat $.Site.Params.dateform .Lastmod }}</small></span>
+    {{ end }}
+    <br />
+    <div class="clear-float"></div>
+</div>
+
+{{ if not .Params.notoc }}
+    {{ with .TableOfContents }}
+        <div class="toc">
+            {{ . }}
+            <a href="#top" class="back-to-top">Back to top</a>
+        </div>
+    {{ end }}
+    {{ partial "toc_on_side.html" . }}
+{{ end }}
+
+<div class="post">
+    {{ partial "headline-hash.html" .Content }}
+</div>
+
 {{ end }}

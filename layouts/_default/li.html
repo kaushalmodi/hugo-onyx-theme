@@ -1,0 +1,8 @@
+<li>
+    <h3><a href='{{ .Permalink }}'> {{ .Title }}</a> </h3>
+
+    <div class="left">{{ partial "date-maybe.html" . }}</div>
+    <div class="clear-float"></div>
+
+    {{ .Description | markdownify }}
+</li>
