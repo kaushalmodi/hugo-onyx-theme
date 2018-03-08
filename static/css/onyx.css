@@ -406,6 +406,13 @@ a.reference {
     border-bottom: 1px dotted #3782BE;
 }
 
+a.reference.active {
+    font-weight: bold;
+}
+a.reference.active::before {
+    content: "> ";
+}
+
 a.reference:hover {
     border-bottom: 1px solid #3782BE;
 }
