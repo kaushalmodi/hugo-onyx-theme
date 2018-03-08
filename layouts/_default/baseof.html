@@ -32,6 +32,8 @@
 		<script src="{{ . | relURL }}"></script>
 	    {{ end }}
 
+            {{ block "footer" . }}{{ end }}
+
 	    {{ template "_internal/google_analytics.html" . }}
 	</div>
     </body>
