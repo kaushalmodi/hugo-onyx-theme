@@ -2,9 +2,8 @@
     <h3>{{ $menu_name | replaceRE "^[0-9]+\\." "" | humanize | title }}</h3>
     <ul>
         {{ range $menu }}
-            {{ $title := (.Title | replaceRE "Test Site" "<b>${0}</b>" | safeHTML) }}
             <li class="toctree-l1">
-                <a class="reference internal" href="{{ .URL }}">{{ $title }}</a>
+                <a class="reference internal" href="{{ .URL }}">{{ printf "%s%s%s" .Pre .Title .Post | safeHTML }}</a>
             </li>
         {{ end }}
     </ul>
