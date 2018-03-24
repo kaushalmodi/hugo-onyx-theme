@@ -22,8 +22,8 @@
 
     {{ partial "date-maybe.html" . }}
     <div class="clear-float"></div>
-    {{ if (ne (dateFormat $.Site.Params.dateform .Date) (dateFormat $.Site.Params.dateform .Lastmod)) }}
-        <span class="post-date"><small>Last modified on {{ dateFormat $.Site.Params.dateform .Lastmod }}</small></span>
+    {{ if (ne (dateFormat ($.Site.Params.dateform | default "Mon Jan 2, 2006") .Date) (dateFormat ($.Site.Params.dateform | default "Mon Jan 2, 2006") .Lastmod)) }}
+        <span class="post-date"><small>Last modified on {{ dateFormat ($.Site.Params.dateform | default "Mon Jan 2, 2006") .Lastmod }}</small></span>
     {{ end }}
     <div class="clear-float"></div>
 </div>
