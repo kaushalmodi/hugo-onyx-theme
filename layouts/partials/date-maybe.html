@@ -1,5 +1,5 @@
 {{ with .Date }}
     {{ if (not (eq (dateFormat "2006-01-02" .) "0001-01-01")) }}
-        <span class="post-date">{{ dateFormat $.Site.Params.dateform . | safeHTML }}</span>
+        <span class="post-date">{{ dateFormat ($.Site.Params.dateform | default "Mon Jan 2, 2006") . | safeHTML }}</span>
     {{ end }}
 {{ end }}
