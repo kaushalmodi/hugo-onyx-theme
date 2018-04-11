@@ -253,6 +253,8 @@ dt:target, .highlight {
 div.note {
     background-color: #EEE;
     border: 1px solid #CCC;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 div.seealso {
