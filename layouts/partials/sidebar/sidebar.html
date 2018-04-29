@@ -14,10 +14,10 @@
             <p class="blurb">{{ . | markdownify }}</p>
         {{ end }}
 
-        {{ partial "sidebar/buttons" . }}
-        {{ partial "sidebar/donate" . }}
-        {{ partial "sidebar/menu" . }}
-        {{ partial "sidebar/relations" . }}
+        {{ partial "sidebar/buttons.html" . }}
+        {{ partial "sidebar/donate.html" . }}
+        {{ partial "sidebar/menu.html" . }}
+        {{ partial "sidebar/relations.html" . }}
     </div>
 </div>
 <div class="clearer"></div>
