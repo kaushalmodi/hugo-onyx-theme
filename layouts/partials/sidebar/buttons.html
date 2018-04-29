@@ -3,7 +3,12 @@
 
     {{ if .Site.Params.sidebar.github_button }}
         <iframe src="https://ghbtns.com/github-btn.html?user={{ .Site.Params.github_user }}&repo={{ .Site.Params.github_repo }}&type=watch&count=true&size=large"
-                style="border: 0; overflow: hidden;" width="200" height="35" sandbox></iframe>
+                style="border: 0; overflow: hidden;" width="200" height="35"
+                sandbox="allow-scripts allow-popups"></iframe>
+        <!-- allow-scripts: Needed for the script to run that updates the star count
+             allow-popups: Needed for the links to open in new tab on
+             clicking the button or star count.
+        -->
     {{ end }}
 
     {{ if .Site.Params.sidebar.travis_button }}
