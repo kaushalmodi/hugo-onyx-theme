@@ -3,7 +3,7 @@
 
     {{ if .Site.Params.sidebar.github_button }}
         <iframe src="https://ghbtns.com/github-btn.html?user={{ .Site.Params.github_user }}&repo={{ .Site.Params.github_repo }}&type=watch&count=true&size=large"
-                style="border: 0; overflow: hidden;" width="200" height="35"></iframe>
+                style="border: 0; overflow: hidden;" width="200" height="35" sandbox></iframe>
     {{ end }}
 
     {{ if .Site.Params.sidebar.travis_button }}
