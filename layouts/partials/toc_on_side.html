@@ -1,4 +1,12 @@
-<script src="/js/libs/jquery/3.3.1/jquery.slim.min.js" integrity="sha384-5CHji72ILEru8LPa/+vW8W3kvx646cJP0f86ipn0zRDHVYFkfGFKBng9VY1ezRU0" crossorigin="anonymous"></script>
+{{ if .Site.IsServer }}
+    <!-- For some reason, the integrity check fails only for this particular script on localhost. -->
+    <script src="{{ "js/libs/jquery/3.3.1/jquery.slim.min.js" | absURL }}"></script>
+{{ else }}
+    <script src="{{ "js/libs/jquery/3.3.1/jquery.slim.min.js" | absURL }}"
+            integrity="sha256-Kh8SKH+rC0mjPgNy12MK5JSSyR1ORlAzIdSjWVqdSak= sha384-5CHji72ILEru8LPa/+vW8W3kvx646cJP0f86ipn0zRDHVYFkfGFKBng9VY1ezRU0 sha512-nNFWF3U9JLChykUiI5fpQaIA0El5uNqhtn6fmCYc8GDQytiQkj1MBs6nIBburC4MR8Bd721tt9dgOeacys/Bkw=="
+            crossorigin="anonymous"></script>
+{{ end }}
+
 <!-- SHA256 for below inline script:
      https://report-uri.com/home/hash/
      'sha256-O+U/ptNNoUqEhNU1BSkb7izMavM1GxrvRrabNX8WTKE='
