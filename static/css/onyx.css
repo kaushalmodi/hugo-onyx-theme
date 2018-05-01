@@ -806,3 +806,9 @@ ul.task-list {
 .clear-float {
     clear: both;
 }
+
+/* Image/Figure */
+figure {
+    margin-left: 0;
+    margin-right: 0;
+}
