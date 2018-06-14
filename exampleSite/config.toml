@@ -3,7 +3,6 @@ baseurl = "https://example.com"
 title = "Hugo Onyx Theme"
 
 theme = "hugo-onyx-theme"
-themesDir = "../../"
 
 enableGitInfo = true
 
