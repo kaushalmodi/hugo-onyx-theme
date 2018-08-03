@@ -3,22 +3,7 @@
 <h1>{{ .Title }}</h1>
 
 <div>
-    {{ with .Params.author }}
-        {{ $author_type := (printf "%T" .) }}
-        {{ $author_is_list := (eq "[]string" $author_type) }}
-        {{ if $author_is_list }}
-            {{ $num := len . }}
-            {{ if gt $num 0 }}
-                <span class="author">&mdash;
-                    {{ range $c, $v := . }}
-                        {{ . -}}{{- if (lt $c (sub $num 1)) -}}, {{ end }}
-                    {{ end }}
-                </span>
-            {{ end }}
-        {{ else }}
-            <span class="author">&mdash;{{ . }}</span>
-        {{ end }}
-    {{ end }}
+    {{ partial "author.html" . }}
 
     {{ partial "date-maybe.html" . }}
     <div class="clear-float"></div>
