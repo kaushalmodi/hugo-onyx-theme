@@ -4,10 +4,6 @@ A documentation theme forked from [Hugo Alabaster
 theme](https://github.com/digitalcraftsman/hugo-alabaster-theme). It is an
 indirect port of [Sphinx](http://www.sphinx-doc.org/en/stable/).
 
-## Minimum requirement
-
-Hugo 0.42
-
 ## Theme components
 This theme is composed of the base theme "hugo-onyx-theme", and
 the "hugo-search-fuse-js" component.

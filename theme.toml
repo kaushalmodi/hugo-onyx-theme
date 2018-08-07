@@ -1,11 +1,11 @@
 name = "Onyx"
 license = "BSD"
-licenselink = "https://github.com/kaushalmodi/hugo-onyx-theme/blob/master/LICENSE.md"
+licenselink = "https://github.com/kaushalmodi/hugo-onyx-theme/blob/master/LICENSE"
 description = "A documentation theme ported from the Hugo Alabaster theme"
 homepage = "https://github.com/kaushalmodi/hugo-onyx-theme"
 tags = ["documentation", "sphinx"]
 features = []
-min_version = "0.42.1"
+min_version = "0.45"
 
 [author]
   name = "Kaushal Modi"
