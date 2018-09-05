@@ -14,6 +14,12 @@
 </div>
 
 <div class="post">
+    {{ with .Description }}
+        <div class="description">
+            {{ . | markdownify }}
+        </div>
+    {{ end }}
+
     {{ partial "headline-hash.html" .Content }}
 </div>
 
