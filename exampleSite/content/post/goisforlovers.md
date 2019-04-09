@@ -282,7 +282,7 @@ instead of depending on the context.
 **Example:**
 
 ```text
-{{ $title := .Site.Title }}
+{{ $title := site.Title }}
 {{ range .Params.tags }}
     <li> <a href="{{ $baseurl }}/tags/{{ . | urlize }}">{{ . }}</a> - {{ $title }} </li>
 {{ end }}
@@ -361,9 +361,9 @@ your top-level config file each January 1st, instead of hunting
 through your templates.
 
 ```text
-{{if .Site.Params.CopyrightHTML}}
+{{if site.Params.CopyrightHTML}}
     <footer>
-        <div class="text-center">{{.Site.Params.CopyrightHTML | safeHtml}}</div>
+        <div class="text-center">{{ site.Params.CopyrightHTML | safeHtml }}</div>
     </footer>
 {{end}}
 ```
@@ -373,7 +373,7 @@ value is to use "with" instead. With rebinds the context `.` within its
 scope, and skips the block if the variable is absent:
 
 ```text
-{{with .Site.Params.TwitterUser}}
+{{with site.Params.TwitterUser}}
     <span class="twitter">
         <a href="https://twitter.com/{{.}}" rel="author">
             <img src="/images/twitter.png" width="48" height="48" title="Twitter: {{.}}" alt="Twitter">
@@ -389,9 +389,9 @@ you can do so, such as in this example:
 <nav class="recent">
     <h1>Recent Posts</h1>
     <ul>
-        {{range first .Site.Params.SidebarRecentLimit .Site.Recent}}
-            <li><a href="{{.RelPermalink}}">{{.Title}}</a></li>
-        {{end}}
+        {{ range first site.Params.SidebarRecentLimit site.Recent }}
+            <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+        {{ end }}
     </ul>
 </nav>
 ```
