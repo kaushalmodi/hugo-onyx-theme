@@ -28,7 +28,7 @@
 	    {{ partial "sidebar/sidebar.html" . }}
 	    {{ partial "footer.html" . }}
 
-	    {{ range .Site.Params.custom_js -}}
+	    {{ range site.Params.custom_js -}}
 		<script src="{{ . | relURL }}"></script>
 	    {{ end }}
 

@@ -1,7 +1,7 @@
 {{ $permalink := .Permalink }}
 <meta property="og:title" content="{{ .Title }}" />
 <meta property="og:description"
-      content="{{ with .Description }}{{ . | plainify }}{{ else }}{{ if .IsPage }}{{ partial "summary_minus_toc.html" . | plainify }}{{ else }}{{ with .Site.Params.description }}{{ . | plainify }}{{ end }}{{ end }}{{ end }}" />
+      content="{{ with .Description }}{{ . | plainify }}{{ else }}{{ if .IsPage }}{{ partial "summary_minus_toc.html" . | plainify }}{{ else }}{{ with site.Params.description }}{{ . | plainify }}{{ end }}{{ end }}{{ end }}" />
 <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}" />
 <meta property="og:url" content="{{ .Permalink }}" />
 {{ with .Params.images }}
@@ -41,7 +41,7 @@
 {{ with .Params.locale }}
     <meta property="og:locale" content="{{ . }}" />
 {{ end }}
-{{ with .Site.Params.title }}
+{{ with site.Params.title }}
     <meta property="og:site_name" content="{{ . }}" />
 {{ end }}
 {{ with .Params.videos }}
@@ -56,7 +56,7 @@
     {{ end }}
 {{ end }}
 <!-- If it is part of a series, link to related articles -->
-{{ $siteSeries := .Site.Taxonomies.series }}
+{{ $siteSeries := site.Taxonomies.series }}
 {{ if $siteSeries }}
     {{ with .Params.series }}
         {{ range $name := . }}
@@ -71,11 +71,11 @@
 {{ end }}
 
 {{ if .IsPage }}
-    {{ range .Site.Authors }}
+    {{ range site.Authors }}
         {{ with .Social.facebook }}
             <meta property="article:author" content="https://www.facebook.com/{{ . }}" />
         {{ end }}
-        {{ with .Site.Social.facebook }}
+        {{ with site.Social.facebook }}
             <meta property="article:publisher" content="https://www.facebook.com/{{ . }}" />
         {{ end }}
         <meta property="article:section" content="{{ .Section }}" />
@@ -87,6 +87,6 @@
     {{ end }}
 {{ end }}
 <!-- Facebook Page Admin ID for Domain Insights -->
-{{ with .Site.Social.facebook_admin }}
+{{ with site.Social.facebook_admin }}
     <meta property="fb:admins" content="{{ . }}" />
 {{ end }}

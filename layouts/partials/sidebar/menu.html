@@ -1,5 +1,5 @@
 {{ $page := . }}
-{{ range $menu_name, $menu := .Site.Menus }}
+{{ range $menu_name, $menu := site.Menus }}
     <h3>{{ $menu_name | replaceRE "^[0-9]+\\." "" | humanize | title }}</h3>
     <ul>
         {{ range $menu }}

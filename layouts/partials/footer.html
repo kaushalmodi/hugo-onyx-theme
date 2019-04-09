@@ -1,9 +1,9 @@
 <div class="footer">
-    {{ if .Site.Params.footer.show_powered_by }}
-        {{ if .Site.Params.source.org_dir }}
+    {{ if site.Params.footer.show_powered_by }}
+        {{ if site.Params.source.org_dir }}
             Exported
-            {{ if .Site.Params.source.org_file }}
-                from <a href="{{ .Site.Params.source.url }}/raw/master/{{ .Site.Params.source.org_file }}"> <code>{{ .Site.Params.source.org_file | replaceRE "^.*/" "" }}</code></a>
+            {{ if site.Params.source.org_file }}
+                from <a href="{{ site.Params.source.url }}/raw/master/{{ site.Params.source.org_file }}"> <code>{{ site.Params.source.org_file | replaceRE "^.*/" "" }}</code></a>
             {{ end }}
             using
             {{ with .Params.creator }}
@@ -15,13 +15,13 @@
         {{ else }}
             This site is generated using
         {{ end }}
-        <a href="https://gohugo.io/">Hugo {{ .Hugo.Version }}</a>
+        <a href="https://gohugo.io/">Hugo {{ hugo.Version }}</a>
 	&plus; <a href="https://github.com/kaushalmodi/hugo-onyx-theme">Onyx</a>
     {{ end }}
 </div>
 
-{{ if .Site.Params.github_banner }}
-    <a href="https://github.com/{{ .Site.Params.github_user }}/{{ .Site.Params.github_repo }}" class="github">
+{{ if site.Params.github_banner }}
+    <a href="https://github.com/{{ site.Params.github_user }}/{{ site.Params.github_repo }}" class="github">
         <img style="position: absolute; top: 0; right: 0; border: 0;" src="/images/forkme_right_darkblue_ribbon.png" alt="Fork me on GitHub" class="github"/>
     </a>
 {{ end }}

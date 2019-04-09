@@ -11,26 +11,26 @@
     <!-- No referrer: https://webbkoll.dataskydd.net/en/ -->
     <meta name="referrer" content="no-referrer">
 
-    {{ with .Site.Params.description }}
+    {{ with site.Params.description }}
         <meta name="description" content="{{ . }}">
     {{ end }}
 
-    {{ .Hugo.Generator }}
+    {{ hugo.Generator }}
 
-    <title>{{ if not .IsHome }}{{ .Title }} &mdash;{{ end }} {{ .Site.Title }}</title>
+    <title>{{ if not .IsHome }}{{ .Title }} &mdash;{{ end }} {{ site.Title }}</title>
 
     <link rel="stylesheet" href="{{ "css/basic.css" | relURL }}" type="text/css" />
     <link rel="stylesheet" href="{{ "css/onyx.css" | relURL }}" type="text/css" />
 
-    {{ range .Site.Params.custom_css }}
+    {{ range site.Params.custom_css }}
         <link rel="stylesheet" href="{{ . | relURL }}">
     {{ end }}
 
-    {{ range .Site.Params.custom_css_absolute }}
+    {{ range site.Params.custom_css_absolute }}
         <link rel="stylesheet" href="{{ . }}">
     {{ end }}
 
-    {{ with .Site.Params.favicon }}
+    {{ with site.Params.favicon }}
         <link rel="shortcut icon" href="{{ . | relURL }}" type="image/x-icon"/>
     {{ else }}
         <link rel="shortcut icon" href="{{ "favicon.ico" | relURL }}" type="image/x-icon"/>
