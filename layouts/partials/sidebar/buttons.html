@@ -20,6 +20,16 @@
 	</p>
     {{ end }}
 
+    {{ if site.Params.sidebar.gha_button }}
+        {{ $workflow_file := site.Params.github_workflow_file }}
+	    <p>
+	        <a href="https://github.com/{{ $path }}/actions/workflows/{{ $workflow_file }}">
+		        <img alt="https://github.com/{{ $path }}/actions/workflows/{{ $workflow_file }}/badge.svg"
+		             src="https://github.com/{{ $path }}/actions/workflows/{{ $workflow_file }}/badge.svg" />
+	    </a>
+	</p>
+    {{ end }}
+
     {{ if site.Params.sidebar.codecov_button }}
 	<p>
 	    <a href="https://codecov.io/github/{{ $path }}">
