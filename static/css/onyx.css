@@ -812,3 +812,8 @@ figure {
     margin-left: 0;
     margin-right: 0;
 }
+
+/* Post-fix a "." to section numbers */
+.section-num::after {
+    content: ".";
+}
