@@ -3,7 +3,7 @@
         {{ if site.Params.source.org_dir }}
             Exported
             {{ if site.Params.source.org_file }}
-                from <a href="{{ site.Params.source.url }}/raw/master/{{ site.Params.source.org_file }}"> <code>{{ site.Params.source.org_file | replaceRE "^.*/" "" }}</code></a>
+                from <a href="{{ site.Params.source.url }}/raw/{{ site.Params.source.default_branch | default "master" }}/{{ site.Params.source.org_file }}"> <code>{{ site.Params.source.org_file | replaceRE "^.*/" "" }}</code></a>
             {{ end }}
             using
             {{ with .Params.creator }}
