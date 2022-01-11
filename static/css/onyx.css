@@ -817,3 +817,12 @@ figure {
 .section-num::after {
     content: ".";
 }
+
+/* org radio target destinations */
+.org-radio, .org-target {
+    color: purple;
+}
+/* org target destinations */
+.org-target::after {
+    content: '◎ ';
+}
