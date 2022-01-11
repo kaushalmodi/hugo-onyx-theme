@@ -461,7 +461,7 @@ a:hover tt, a:hover code {
     }
 
     ul {
-    	margin-left: 0;
+    	margin-left: 1rem;
     }
 
     .document {
@@ -479,9 +479,6 @@ a:hover tt, a:hover code {
     .github {
         display: none;
     }
-
-
-
 }
 
 
