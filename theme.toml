@@ -5,7 +5,7 @@ description = "A documentation theme ported from the Hugo Alabaster theme"
 homepage = "https://github.com/kaushalmodi/hugo-onyx-theme"
 tags = ["documentation", "sphinx"]
 features = []
-min_version = "0.53.0"
+min_version = "0.73.0"
 
 [author]
   name = "Kaushal Modi"
