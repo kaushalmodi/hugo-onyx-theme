@@ -26,7 +26,7 @@ To use this component,
         path = "github.com/kaushalmodi/hugo-onyx-theme"
     ```
 
-2.  Run `hugo mod -get -u` in your main site directory.
+2.  Run `hugo mod tidy` in your main site directory.
 
 ## Theme components
 
