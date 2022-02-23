@@ -23,11 +23,11 @@
     <link rel="stylesheet" href="{{ "css/onyx.css" | relURL }}" type="text/css" />
 
     {{ range site.Params.custom_css }}
-        <link rel="stylesheet" href="{{ . | relURL }}">
+        <link rel="stylesheet" href="{{ . | relURL }}" type="text/css" />
     {{ end }}
 
     {{ range site.Params.custom_css_absolute }}
-        <link rel="stylesheet" href="{{ . }}">
+        <link rel="stylesheet" href="{{ . }}" type="text/css" />
     {{ end }}
 
     {{ with site.Params.favicon }}
