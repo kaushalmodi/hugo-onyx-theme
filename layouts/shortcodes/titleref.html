@@ -3,10 +3,10 @@
      and if present, that is used as the link description text.
 
      Examples::
-       {{< pagelink "PAGE TITLE" >}}
-       {{< pagelink "PAGE TITLE#anchor" >}}
-       {{< pagelink "PAGE TITLE" "LINK DESCRIPTION" >}}
-       {{< pagelink "PAGE TITLE#anchor" "LINK DESCRIPTION" >}}
+       {{< titleref "PAGE TITLE" >}}
+       {{< titleref "PAGE TITLE#anchor" >}}
+       {{< titleref "PAGE TITLE" "LINK DESCRIPTION" >}}
+       {{< titleref "PAGE TITLE#anchor" "LINK DESCRIPTION" >}}
 */}}
 {{- $title_anchor := (.Get 0) -}}
 {{- $title := trim (index (split $title_anchor "#") 0) " " -}}
