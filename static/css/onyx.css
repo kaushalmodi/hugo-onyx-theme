@@ -730,6 +730,11 @@ ul.task-list {
     }
 }
 
+/* Hide bullets in TOC when headings are numbered. */
+.toc.has-section-numbers ul {
+  list-style: none;
+}
+
 /* Captions */
 figcaption,
 .src-block-caption,
